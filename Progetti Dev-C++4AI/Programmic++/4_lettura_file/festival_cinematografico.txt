@@ -1,0 +1,4 @@
+ccc aeae 34000000 US
+aaa abab 15000000 ITA
+bbb acac 65000000 ITA
+ccc adad 34000000 US

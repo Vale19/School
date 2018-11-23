@@ -1,0 +1,6 @@
+Aaa 17 7
+Bbb 16 8
+Ccc 17 9
+Ddd 18 4
+Eee 16 9
+Fff 16 8
