@@ -1,0 +1,35 @@
+<!DOCTYPE html>  //Definisce il tipo di documneto
+
+<html> </html>  //Tag apertura e chiusura dell'html
+
+<head> </head> //Tag apertura e chiusura delle cose (title, style etc..) che non appaiono a schermo
+
+<body> </body>  //Corpo del programma
+
+<b> </b>  //Bold
+
+<hr>  //Aggiunge una riga per spaziare i contenuti
+
+<br>  //Serve a spaziare tra le varie linee
+
+<table> </table>  //Apertura  e chiusura di una tabella
+
+<border>  //Si utilizza per dare il bordo ad una tabella
+
+<tr> </tr>  //Si utilizza all'interno delle tabelle per assegnare alle celle determinati valori su una linea
+
+<!--...-->  //Commento
+
+<th>  //Il testo della cella all'interno della tabella verrà allineato al centro
+
+<td>  //Il testo della cella all'interno della tabella verrà allineato a sinistra
+
+<ol> </ol> <ul> </ul>  //Lista Ordinata; Lista NON Ordinata
+
+<li> <p align = "left"> <font color = "#FF0000" size = "5"> Lorem </font> </p> </li> //Si utilizza all'interno di una lista ordinata o non
+
+<p style = "text-align : center; color: red; background-color : blue;"> Lorem ipsum </p>  //Si utilizza per dare uno stile alla pagina e alla linea
+
+<p align = "center">  <b> Lista Ordinata </b> </p>
+
+<style> </style>  //Dà lo stile ad una pagina: <style> h1{ text-align: center;} </style>
