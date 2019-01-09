@@ -4,6 +4,7 @@
 using namespace std;
 
 class CC
+
 {
 	string correntista;
 	string nc;
@@ -18,40 +19,40 @@ class CC
 		
 		void prelievo (float a) {
 			if (saldo > a) {
-				saldo -=a;
-				cout << "il saldo attuale e' i euro "<< saldo << endl;
+				saldo -= a;
+				cout << "Il saldo attuale e' di euro "<< saldo << endl;
 			} else {
-				cout << "non e' possibile effettuare il prelievo di una cifra\n";
+				cout << "Non e' possibile effettuare il prelievo di una cifra\n";
 			}
 		}
 		
 		void versamento (float a) {
 			saldo += a;
-			cout << "il saldo attuale di euro e' " << saldo;
+			cout << "Il saldo attuale e' di euro " << saldo << endl;
 		}
 		
 		void stampa
 		(){
-			cout<<"numero conto"<<nc<<endl;
-			cout<<"correntista"<<correntista<<endl;
-			cout<<"saldo"<<saldo<<endl;
-			cout<<"citta"<<citta<<endl;
-			cout<<"indirizzo"<<indirizzo<<endl;
+			cout << "Numero conto " << nc << endl;
+			cout << "Correntista " << correntista << endl;
+			cout << "Saldo " << saldo <<endl;
+			cout << "Citta" << citta << endl;
+			cout << "Indirizzo " << indirizzo << endl;
 		}
 		
 		void crea()
 		{
-			cout<<"inserisci numero conto"<<endl;
-			cin>>nc;
-			cout <<"inserisci il cognome del correntista "<<endl;
+			cout << "Inserisci numero conto " << endl;
+			cin >> nc;
+			cout << "Inserisci il cognome del correntista " << endl;
 			cin>>correntista; 
 		}
 		
 		void cambioresidenza(){
-			cout<<"inserisci la citta"<<endl;
-			cin>>citta;
-			cout<<"inserisci l'indirizzo"<<endl;
-			cin>>indirizzo;
+			cout << "Inserisci la citta " << endl;
+			cin >> citta;
+			cout << "Inserisci l'indirizzo " << endl;
+			cin >> indirizzo;
 		}
 };
 
@@ -62,22 +63,22 @@ int main(){
 	conto.crea();
 		do
 		{
-			cout<<"1.prelievo\n";
-			cout<<"2.versamento\n";
-			cout<<"3.stampa dati del conto\n";
-			cout<<"4.Cambia residenza\n\n";
-			cout<<"0.esci\n";
-			cout<<"fai una scelta\n";
+			cout << "1.prelievo\n";
+			cout << "2.versamento\n";
+			cout << "3.stampa dati del conto\n";
+			cout << "4.Cambia residenza\n";
+			cout << "0.esci\n";
+			cout << "fai una scelta\n";
 			cin >> scelta;
 			switch (scelta){
 				case 1:
-					cout<<"inserire la cifra da prelevare";
-					cin>>a;
+					cout << "Inserire la cifra da prelevare ";
+					cin >> a;
 					conto.prelievo(a);
 					break;
 				case 2:
-					cout<<"inserire la cifra da versare";
-					cin>>a;
+					cout << "Inserire la cifra da versare ";
+					cin >> a;
 					conto.versamento(a);
 					break;
 					
@@ -86,10 +87,13 @@ int main(){
 					break;
 				case 4:
 					conto.cambioresidenza();
-					break;	
+					break;
+				case 0:
+					scelta = 0;
+					break;
 			}
 			
 		}
 		while (scelta!=0);
-		return(0);
+		//return(0);
 }
