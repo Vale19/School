@@ -119,6 +119,7 @@ int main(){
 					break;
 				case 5:
 					conto.salvataggio();
+					break;
 				case 0:
 					scelta = 0;
 					break;
