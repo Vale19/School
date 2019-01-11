@@ -71,11 +71,10 @@ class CC{
 			cin >> indirizzo;
 		}
 		void salvataggio() {
-			f1.open("C:\\Users\\N10_4A\\Desktop\\Programmic++\\file.txt", ios :: app);
-			f1 << lista[i + 1].importo << lista[i + 1].data;
-			for(i = 1; i < nop; i++){
-				f1 << lista[i].importo << lista[i].data;
-			}
+			f1.open("C:\\Users\\N10_4A\\Desktop\\Programmic++\\file.txt", ios :: out);
+			for(i = 0; i < nop; i++)
+				f1 << lista[i].importo << " " << lista[i].data << endl;
+			f1.close();
 		}
 };
 
