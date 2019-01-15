@@ -44,7 +44,7 @@ class CC{
 		void versamento (float a , string data) {
 			saldo += a;
 			cout << "Il saldo attuale e' di euro " << saldo << endl;
-			lista[nop].importo = a;
+			lista[nop].importo = +a;
 			lista[nop].data = data;
 			nop++;
 		}
@@ -53,7 +53,7 @@ class CC{
 			cout << "Numero conto " << nc << endl;
 			cout << "Correntista " << correntista << endl;
 			cout << "Saldo " << saldo <<endl;
-			cout << "Citta" << citta << endl;
+			cout << "Citta " << citta << endl;
 			cout << "Indirizzo " << indirizzo << endl;
 		}
 		
@@ -71,7 +71,7 @@ class CC{
 			cin >> indirizzo;
 		}
 		void salvataggio() {
-			f1.open("C:\\Users\\N10_4A\\Desktop\\Programmic++\\file.txt", ios :: out);
+			f1.open("C:\\Users\\studente\\Desktop\\prova.txt", ios :: out);
 			for(i = 0; i < nop; i++)
 				f1 << lista[i].importo << " " << lista[i].data << endl;
 			f1.close();
