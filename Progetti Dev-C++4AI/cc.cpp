@@ -32,7 +32,7 @@ class CC{
 		void prelievo (float a, string data) {
 			if (saldo > a) {
 				saldo -= a;
-				cout << "Il saldo attuale e' di euro "<< saldo << endl;
+				cout << "Il saldo attuale e' di euro " << saldo << endl;
 				lista[nop].importo = -a;
 				lista[nop].data = data;
 				nop++;
@@ -82,7 +82,7 @@ int main(){
 	int scelta;
 	string data;
 	float a;
-	CC conto (0);
+	CC conto (0); // conto = istanza
 	conto.crea();
 		do
 		{
