@@ -14,7 +14,7 @@ class giorno{
 			cin >> tmin;
 			cout << "Inserire la temperatura massima del giorno " << ng << endl;
 			cin >> tmax;
-		}
+		}	
 		
 		int differenza(){
 			return (tmax - tmin);
@@ -41,7 +41,7 @@ class giorno{
 const int NG = 31;
 int main(){
 	
-	int i, sc;
+	int i, sc, numg;
 	giorno dic[NG]; //Vettore che contiene 31 istanze della classe Giorno.
 	int min, p, m;
 	for(int i = 0; i < NG; i++)
@@ -57,8 +57,12 @@ int main(){
 		cout << endl;
 		switch (sc){
 			case 1:
-				for(int i = 0; i < NG; i++)
-					cout << "L'escursione termica del giorno " << dic[i].getng() << " e': " << dic[i].differenza() << endl;
+				cout << "Quale e' il giorno che ti interessa? " << endl;
+				cin >> numg;
+				//for(int i = 0; i < NG; i++){
+					//cout << "L'escursione termica del giorno " << dic[i].getng() << " e': " << dic[i].differenza() << endl;
+				cout << "L'escursione termica del giorno" << numg << dic[i].getng() << " e': " << dic[numg].differenza() << endl;
+				//}
 				break;
 				
 			case 2:
