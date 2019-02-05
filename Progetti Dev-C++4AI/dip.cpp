@@ -19,18 +19,20 @@ using namespace std;
 
 class dipendente{
 	private:
-		 string cognome;
-		 float stipendio;
+		string cognome;
+		float stipendio;
 		 
 	public:
 		void ins_dip(string passcognome, float passstipendio){
 			cognome = passcognome;
 			stipendio = passstipendio;
 		}
-		string getcognome(){
+		string getcognome(string passcognome){
+			cognome = passcognome;
 			return cognome;
 		}
-		float getstipendio(){
+		float getstipendio(float passstipendio){
+			stipendio = passstipendio;
 			return stipendio;
 		}
 };
@@ -39,30 +41,35 @@ int main(){
 	const int NDIP = 10;
 	dipendente dipendenti[NDIP];
 	int i, sc;
+	string cognome;
+	float stipendio;
 	
 	
-	cout << "\n1.Riempimento\n";
-	cout << "\n2.stampa attributi dipendenti\n";
-	cin >> sc;
 	
-	switch(sc){
-			string cognome;
-			float stipendio;
-		case '1':
+	do{
+		cout << "\n1.Riempimento\n";
+		cout << "\n2.Stampa attributi dipendenti\n";
+		cin >> sc;
+		
+		switch(sc){
+			case 1:
 			
-			for ( i = 0; i < NDIP; i++ ){
-			cout << "Inserisci cognome e stipendio del " << i + 1 << " dipendente: \n";
-			cin >> cognome >> stipendio;
-			dipendenti[i].ins_dip(cognome, stipendio);
-			}
-			break;
-		case '2':
-			cout << "Stampa dati del dipendente:\n";
-			for(i = 0; i < NDIP; i++){
-				dipendenti[i].getcognome(); 
-				dipendenti[i].getstipendio();
-			}
-			break;
+				for ( i = 0; i < NDIP; i++ ){
+					cout << "Inserisci cognome e stipendio del " << i + 1 << " dipendente: \n";
+					cin >> cognome >> stipendio;
+					dipendenti[i].ins_dip(cognome, stipendio);
+				}
+				break;
+			case 2:
+				cout << "Stampa dati del dipendente:\n";
+				for(i = 0; i < NDIP; i++){
+					dipendenti[i].ins_dip(cognome, stipendio);
+					//dipendenti[i].getcognome(cognome); 
+					//dipendenti[i].getstipendio(stipendio);
+				}
+				break;
+		}
 	}
+	while(sc != 0);
+	
 }
-
