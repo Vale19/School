@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 
 /*
@@ -27,12 +28,10 @@ class dipendente{
 			cognome = passcognome;
 			stipendio = passstipendio;
 		}
-		string getcognome(string passcognome){
-			cognome = passcognome;
+		string getcognome(){
 			return cognome;
 		}
-		float getstipendio(float passstipendio){
-			stipendio = passstipendio;
+		float getstipendio(){
 			return stipendio;
 		}
 };
@@ -40,33 +39,35 @@ class dipendente{
 int main(){
 	const int NDIP = 10;
 	dipendente dipendenti[NDIP];
-	int i, sc;
+	int i = 0, sc;
 	string cognome;
 	float stipendio;
 	
 	
 	
 	do{
-		cout << "\n1.Riempimento\n";
+		cout << "\n1.Riempimento";
 		cout << "\n2.Stampa attributi dipendenti\n";
 		cin >> sc;
+		system ("CLS");
 		
 		switch(sc){
 			case 1:
 			
-				for ( i = 0; i < NDIP; i++ ){
+				//for ( i = 0; i < NDIP; i++ ){
 					cout << "Inserisci cognome e stipendio del " << i + 1 << " dipendente: \n";
 					cin >> cognome >> stipendio;
 					dipendenti[i].ins_dip(cognome, stipendio);
-				}
+					i++;
+					//system("CLS");
+				//}
 				break;
 			case 2:
-				cout << "Stampa dati del dipendente:\n";
-				for(i = 0; i < NDIP; i++){
-					dipendenti[i].ins_dip(cognome, stipendio);
-					//dipendenti[i].getcognome(cognome); 
-					//dipendenti[i].getstipendio(stipendio);
-				}
+				
+				cout << "Stampa dati dei dipendenti:\n";
+				for(i = 0; i < NDIP; i++)
+					cout << "Dipendente " << i + 1 << dipendenti[i].getcognome() << " ||  " << dipendenti[i].getstipendio() << endl;
+					//cout << dipendenti[i].getcognome() << " ||  " << dipendenti[i].getstipendio() << endl;
 				break;
 		}
 	}
