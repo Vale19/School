@@ -1,6 +1,10 @@
+//Powered by Valentin Ichim <3
+
 #include <iostream>
 #include <string>
 #include <stdlib.h>
+#include <fstream>
+
 using namespace std;
 
 /*
@@ -34,20 +38,25 @@ class dipendente{
 		float getstipendio(){
 			return stipendio;
 		}
+		
 };
 
 int main(){
 	const int NDIP = 10;
 	dipendente dipendenti[NDIP];
-	int i = 0, sc;
+	int i = 0, sc, n;
 	string cognome;
 	float stipendio;
+	float n_sti; //Nuovo Stipendio
+	fstream f1;
 	
 	
 	
 	do{
-		cout << "\n1.Riempimento";
-		cout << "\n2.Stampa attributi dipendenti\n";
+		cout << "\n1. Riempimento";
+		cout << "\n2. Stampa attributi dipendenti";
+		cout << "\n3. Cambia stipendio di un dipendente";
+		cout << "\n4. Salvataggio su File\n";
 		cin >> sc;
 		system ("CLS");
 		
@@ -66,9 +75,28 @@ int main(){
 				
 				cout << "Stampa dati dei dipendenti:\n";
 				for(i = 0; i < NDIP; i++)
-					cout << "Dipendente " << i + 1 << dipendenti[i].getcognome() << " ||  " << dipendenti[i].getstipendio() << endl;
+					if(i < 9)
+						cout << "Dipendente " << i + 1 << " " << dipendenti[i].getcognome() << "  ||  " << dipendenti[i].getstipendio() << endl;
+					else
+						cout << "Dipendente " << i + 1 << " " << dipendenti[i].getcognome() << " ||  " << dipendenti[i].getstipendio() << endl;
 					//cout << dipendenti[i].getcognome() << " ||  " << dipendenti[i].getstipendio() << endl;
 				break;
+			/*case 3: 
+				cout << "Inserisci il numero del dipendente [0->9]\n";
+				cin >> n;
+				cout << "Quale sara' il nuovo stipendio del dipendente? \n";
+				cin >> n_sti;
+				for(i = 0; i < NDIP; i++){
+					if(i == n)
+						//dipendenti[i].getstipendio() = n_sti;
+				}
+				break; */
+			case 4:
+				f1.open("C:\\Users\\Valentin\\Desktop\\dip.txt", ios :: out);
+				for(i = 0; i < NDIP; i++)
+					f1 << dipendenti[i].getcognome() << " " << dipendenti[i].getstipendio() << endl;
+				f1.close();
+				cout << "\n--- Salvataggio effettuato ---\n";
 		}
 	}
 	while(sc != 0);
