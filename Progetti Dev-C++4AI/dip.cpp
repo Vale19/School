@@ -44,9 +44,9 @@ class dipendente{
 int main(){
 	const int NDIP = 10;
 	dipendente dipendenti[NDIP];
-	int i = 0, sc, n;
-	string cognome;
-	float stipendio;
+	int i = 0, sc;
+	string cognome, c;
+	float stipendio, sti_min;
 	float n_sti; //Nuovo Stipendio
 	fstream f1;
 	
@@ -82,19 +82,25 @@ int main(){
 					//cout << dipendenti[i].getcognome() << " ||  " << dipendenti[i].getstipendio() << endl;
 				break;
 			/*case 3: 
-				cout << "Inserisci il numero del dipendente [0->9]\n";
-				cin >> n;
+				cout << "Inserisci il cognome del dipendente [0->9]\n";
+				cin >> c;
 				cout << "Quale sara' il nuovo stipendio del dipendente? \n";
 				cin >> n_sti;
+				f1.open("C:\\Users\\Valentin\\Desktop\\dip.txt", ios :: out);C:\\Users\\N10_4A\\Desktop\\dip.txt
 				for(i = 0; i < NDIP; i++){
-					if(i == n)
-						//dipendenti[i].getstipendio() = n_sti;
+					if(dipendenti[i].getcognome() == c)
+						dipendenti[i].getstipendio() = n_sti;
 				}
-				break; */
+				break;*/
 			case 4:
+				cout << "Inserisci uno stipendio minimo: \n";
+				cin >> sti_min;
 				f1.open("C:\\Users\\Valentin\\Desktop\\dip.txt", ios :: out);
-				for(i = 0; i < NDIP; i++)
-					f1 << dipendenti[i].getcognome() << " " << dipendenti[i].getstipendio() << endl;
+				for(i = 0; i < NDIP; i++){
+					if(dipendenti[i].getstipendio() > sti_min){
+						f1 << dipendenti[i].getcognome() << " " << dipendenti[i].getstipendio() << endl;
+					}
+				}
 				f1.close();
 				cout << "\n--- Salvataggio effettuato ---\n";
 		}
