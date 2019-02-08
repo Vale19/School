@@ -103,6 +103,22 @@ int main(){
 				}
 				f1.close();
 				cout << "\n--- Salvataggio effettuato ---\n";
+			case 4:
+				file2.open("D:\\Aumenti.txt",ios::in);
+				file2>>cog[0]>>stip[0];
+				while(!file2.eof()){
+					k++;
+					file2>>cog[k]>>stip[k];
+			}
+			for(int i=0;i<k;i++){
+				for(int x=0;x<j;x++){
+					if(cog[i]==azienda[x].getcog()){
+						azienda[x].stipendio=stip[i];
+					}
+						
+				}
+			}
+			break;
 		}
 	}
 	while(sc != 0);
