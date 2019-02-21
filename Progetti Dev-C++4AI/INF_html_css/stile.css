@@ -1,11 +1,34 @@
+body{
+	background-color: #1affa3;
+}
+img{
+	float: right;
+	weigth: 500;
+	height: 250;
+	
+}
 h1{
 	color: navy;
 	font-family: IMPACT;
-	font-size: 24px;
+	font-size: 45px;
 }
 h3{
+	border-left: 4px solid red;
 	color: #FF4500;
-	font-family: arial;
-	font-size: 18px;
+	font-family: arial; 
+	font-size: 22px;
 }
-
+ul{
+	font-weight: bold;
+}
+p{
+	font-weight: bold;
+}
+li{
+	color: black;
+	font-family: arial;
+	font-size: 20px;
+}
+ul{
+	list-style-type: square;
+}
