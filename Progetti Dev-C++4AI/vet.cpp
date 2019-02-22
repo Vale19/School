@@ -17,8 +17,8 @@ class vettore{
 		void inserisci(int el, int pos){
 			int i; 
 			n++;
-			for(int i = 0; i > pos; i--)
-				v[i] = v[i - 1];
+			for(int i = n-1; i > pos; i--)
+				v[i] = v[i-1];
 			v[pos] = el;
 		}
 		
