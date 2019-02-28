@@ -1,3 +1,8 @@
+/*
+	Inserimento di un numero di cellulari con codice, prezzo, e ore di autonomia. Successivamente calcolo della media dei prezzi, 
+	delle ore di autonomia, cellulare con prezzo massimo, INSERIMENTO DI UN NUOVO DATO facendo scalare le posizioni agli altri 
+	cellulari. Infine viene effettuata la STAMPA dei dati.
+*/
 #include <iostream>
 #include <string>
 using namespace std;
