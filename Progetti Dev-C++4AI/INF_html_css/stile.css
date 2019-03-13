@@ -32,3 +32,27 @@ li{
 ul{
 	list-style-type: square;
 }
+#d_anagraf{
+	border: 2px solid black;
+  	margin-top: 100px;
+  	margin-bottom: 100px;
+  	margin-right: 150px;
+ 	margin-left: 20px;
+  	background-color: #00ff00;
+}
+#f_scolastica{
+	border: 2px solid black;
+  	margin-top: 100px;
+  	margin-bottom: 100px;
+  	margin-right: 150px;
+ 	margin-left: 20px;
+  	background-color: red;
+}
+#hobby{
+	border: 2px solid black;
+  	margin-top: 100px;
+  	margin-bottom: 100px;
+  	margin-right: 150px;
+ 	margin-left: 20px;
+  	background-color: blue;
+}
