@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Uso funzione</title>
+<script>
+function funz(){
+var str1=document.f1.n1.value
+document.write(str1)
+document.write("<br>")
+document.write(str1.charAt(3))
+document.write("<br>")
+document.write(str1.charAt(1))
+document.write("<br>")
+document.write(str1.indexOf("@ù"))
+document.write("<br>")
+if(str1.indexOf("@ù")==-1)
+	document.write("senza @ù")
+else
+	document.write("contiene @ù")
+}
+</script>
+</head>
+<body>
+<form name="f1">
+<input type="text" name="n1"><br>
+<input type="button" onclick="funz()" value="Premi">
+</body>
+</html>
