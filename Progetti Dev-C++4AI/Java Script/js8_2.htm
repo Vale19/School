@@ -1,0 +1,51 @@
+<!doctype html>
+<head>
+<title> Controllo input dati</title>
+<script>
+
+function controllaDati(){
+	var ok=true
+	if(document.getElementById("nome").value=="")
+	{
+		alert("nome obbligatorio")
+		ok=false;
+	} 
+	if(document.getElementById("cognome").value=="")
+	{
+		alert("cognome obbligatorio")
+		ok=false;
+	}
+	var str=document.getElementById("data").value
+	if(document.getElementById("cognome").value=="")
+	{
+		alert("data obbligatoria")
+		ok=false;
+	}
+	var ggstr=str.substring(0,2)
+	ggstr=parseInt(ggstr)
+	if(ggstr>12)
+		alert("mese>12")
+	if(ok)
+		alert("dati ok"+"mese="+ggstr)
+}
+</script>
+</head>
+<body>
+   <form>
+        Inserisci il tuo nome:
+        <input type="text" id="nome">
+        <br>
+		Inserisci il tuo cognome:
+        <input type="text" id="cognome">
+        <br>	
+		Inserisci data di nascita formato gg/mm/aaaa:
+        <input type="text" id="data">
+        <br>		
+
+   <input type="button" id="controlla" value="Controlla i dati del modulo" onclick="controllaDati()">
+   <input type="reset" id="cancella" value="Cancella i dati delmodulo">
+
+	</form>
+        
+</body>
+</html>
