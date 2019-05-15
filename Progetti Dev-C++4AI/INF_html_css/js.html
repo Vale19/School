@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<title>Gestione onmouseover onmouseout</title>
+	<script type = "text/javascript">
+		function cambia()
+		{
+			//al passaggio del mouse vienew fornita spiegazione sostitutiva
+			document.getElementByid("ciao1234").innerHTML="ciaooo"
+		}
+		function spiega()
+		{
+			//al passaggio del mouse sull'immagine viene fornita una descrizione
+			//alert("Logo di JavaScript")
+			document.getElementById("ciao1234").innerHTML="ciao"
+		}
+	</script>
+</head>
+
+<body>
+	<p id = "ciao1234"> </p>
+	<img src = "https://source.unsplash.com/random/450x600" title = "logo" onmouseover = "spiega()" onmouseout = "cambia()">
+</body>
+</html>
