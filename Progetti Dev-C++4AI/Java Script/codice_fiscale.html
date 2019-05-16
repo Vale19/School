@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Codice Fiscale </title>
+        
+        <script>
+            function funz(){
+                var i;
+                var cont=0;
+                var cont2=0;
+                var str1=f1.n1.value;
+                var str2=f1.n2.value;
+                document.write("<i>Consonanti Cognome: </i>")
+                for(i=0; i<str1.length; i++){
+                    if(cont<3){
+                        if(str1.charAt(i) != 'A' && str1.charAt(i) != 'a' && str1.charAt(i) != 'E' && str1.charAt(i) != 'e' && str1.charAt(i) != 'I' && str1.charAt(i) != 'i' && str1.charAt(i) != 'O' && str1.charAt(i) != 'o' && str1.charAt(i) != 'U' && str1.charAt(i) != 'u'){
+                            document.write("<b>" + str1.charAt(i) + "</b>")
+                            cont++;
+                        }
+                    }
+                }
+                document.write("<br><br><i>Consonanti Nome: </i>")
+                for(i=0; i<str2.length; i++){
+                    if(cont2<3){
+                        if(str2.charAt(i) != 'A' && str2.charAt(i) != 'a' && str2.charAt(i) != 'E' && str2.charAt(i) != 'e' && str2.charAt(i) != 'I' && str2.charAt(i) != 'i' && str2.charAt(i) != 'O' && str2.charAt(i) != 'o' && str2.charAt(i) != 'U' && str2.charAt(i) != 'u'){
+                            document.write("<b>" + str2.charAt(i) + "</b>")
+                            cont2++;
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f1">
+            <input type="text" name="n1">
+            <br>
+            <br>
+            <input type="text" name="n2">
+            <input type="button" onclick="funz()" value="Premi per stampare le prime tre consonanti del tuo cognome e nome">
+
+        </form>
+    </body>
+</html>
