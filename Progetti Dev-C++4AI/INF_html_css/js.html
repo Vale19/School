@@ -1,24 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Gestione onmouseover onmouseout</title>
-	<script type = "text/javascript">
-		function cambia()
-		{
-			//al passaggio del mouse vienew fornita spiegazione sostitutiva
-			document.getElementByid("ciao1234").innerHTML="ciaooo"
-		}
-		function spiega()
-		{
-			//al passaggio del mouse sull'immagine viene fornita una descrizione
-			//alert("Logo di JavaScript")
-			document.getElementById("ciao1234").innerHTML="ciao"
-		}
-	</script>
-</head>
-
-<body>
-	<p id = "ciao1234"> </p>
-	<img src = "https://source.unsplash.com/random/450x600" title = "logo" onmouseover = "spiega()" onmouseout = "cambia()">
-</body>
-</html>
+    <head>
+        <title>Gestione onmouseover onmouseout</title>
+        <script>
+            function cambia(messaggio)
+            {
+                //al passaggio del mouse viene fornita spiegazione sostituendo il testo del paragrafo
+                document.getElementById("testo").innerHTML=messaggio
+            }
+        </script>
+    </head>
+    <body>
+        <img src="https://i0.wp.com/www.associazioneincanto.it/wp-content/uploads/2016/03/js-logo-1.png?fit=500%2C500/500x625" title="logo"  onmouseover="cambia('Logo di JavaScript')" onmouseout="cambia('Passa sul logo per avere più informazioni')"
+    </body>
