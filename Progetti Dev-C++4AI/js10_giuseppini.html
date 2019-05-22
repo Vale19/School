@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <script>
+        function funz(){
+            var tentativi = parseInt(document.getElementById("tentativi").value)
+            var min=0; 
+            var max=6;
+            var casi = [0, 0, 0, 0, 0, 0]
+            for (i = 0; i < tentativi; i++) {
+                var random = Math.floor(Math.random() * (+max - +min)) + +min; 
+
+                casi[random]++
+                
+            }
+            console.log(casi)
+            document.getElementById("data").innerHTML = "";
+
+
+            for (i = 0; i < casi.length; i++) {
+
+                const element = casi[i];
+                console.log("<tr><td>"+(i+1)+"</td><td>"+(element)+"</td><td>"+(element/tentativi)+"</td></tr>")
+
+                document.getElementById("data").innerHTML = document.getElementById("data").innerHTML +  "<tr><td>"+(i+1)+"</td><td>"+(element)+"</td><td>"+(element/tentativi)+"</td></tr>"
+
+
+            }
+            
+
+            
+        }
+    </script>
+<input type="number" id="tentativi" value="10000">
+<p id="res">Prova un po' <button onclick="funz();">VAI!</button></p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Numero dado</th>
+            <th>Evento accaduto</th>
+            <th>Percentuale</th>
+        </tr>
+    </thead>
+    <tbody id="data">
+    </tbody>
+</table>
+<body>
+    
+</body>
+</html>
