@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test sulle reti</title>
+        <script type="text/javascript">
+            var som=0
+            function corretta()
+            {
+                som += 1
+            }   
+            function sbagliata()
+            {
+                som -= 1
+            }
+            function elaboraTest()
+            {
+                if(som<0)
+                    document.getElementById("testo").innerHTML+="Scarsissimo"
+                else if(som==0)
+                    document.getElementById("testo").innerHTML+="Scarso"
+                else
+                    document.getElementById("testo").innerHTML+="Benino"
+
+            }
+        </script>
+    </head>
+    <body>
+        <h4>Rispondi alle seguenti domande:</h4>
+        <br>
+        <strong>LAN sta per:</strong>
+        <br>
+        <input type="radio" name="domanda1" onclick="corretta()">Local Area Network
+        <br>
+        <input type="radio" name="domanda1" onclick="sbagliata()">Love Area Noise
+        <br>
+        <input type="radio" name="domanda1" onclick="sbagliata()">Local Art Network
+        <br>
+        <strong>WAN sta per:</strong>
+        <br>
+        <input type="radio" name="domanda2" onclick="sbagliata()">Wise Art Network
+        <br>
+        <input type="radio" name="domanda2" onclick="sbagliata()">Wise Area Noise
+        <br>
+        <input type="radio" name="domanda2" onclick="corretta()">Wise Area Network
+        <br>
+        <strong>HTML sta per:</strong>
+        <br>
+        <input type="radio" name="domanda3" onclick="corretta()">HyperTable Markup Language
+        <br>
+        <input type="radio" name="domanda3" onclick="corretta()">HyperText Modify Language
+        <br>
+        <input type="radio" name="domanda3" onclick="corretta()">HyperText Markup Language
+        <input type="button" value="verifica" onclick="elaboraTest()">
+        <br>
+        <p id="testo">Giudizio: </p>
+    </body>
+</html>
