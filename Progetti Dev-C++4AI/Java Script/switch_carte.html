@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var foto=("asso_fiori.jpg" "asso_picche.jpg" "asso_cuori.jpg" "asso_quadri.jpg")
+            var cont=2
+            function indietro(){
+                cont++
+                document.getElementById("figura").src="immagini/"+ foto[cont]
+                if(cont == 0)
+                    document.getElementById("1").disabled=true 
+                else
+                    document.getElementById("a").disabled=false
+            }
+            function avanti(){
+                cont++
+                document.getElementById("figura").src="immagini/" + foto[cont]
+                if(cont==2)
+                    document.getElementById("a").disabled=true
+                else
+                    document.getElementById("1").disabled=false 
+            }
+        </script>
+    </head>
+    <body>
+        <img id="figura" src="" alt="">
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Apri Sito
+        </title>
+        <script type="text/javascript">
+             function aprisito(){
+                 if(document.getElementById("sito").selectedIndex=="0")
+                    alert("Scelta Obbligatoria")
+                 else
+                    aprifinestra(document.getElementById("sito").value)
+             }
+             function aprifinestra(site){
+                 switch(site){
+                     case "1":
+                        window.open("http://www.lastampa.it")
+                     break;
+
+                     case "2":
+                        window.open("http://www.repubblica.it")
+                     break;
+
+                     case "3":
+                     window.open("http://www.corriere.it")
+                     break;
+
+                     case "4":
+                     window.open("http://www.liberoquotidiano.it")
+                     break;
+
+                     case "5":
+                     window.open("http://www.ilgiornale.it")
+                     break;
+                 }
+             }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h3>Scegli il sito desiderato</h3>
+            <select id="sito">
+                <option selected>------</option>
+                <option value="1">La stampa</option>
+                <option value="2">La Repubblica</option>
+                <option value="3">Corriere della sera</option>
+                <option value="4">Libero</option>
+                <option value="5">Il Giornale</option>
+            </select>
+            <input type="button" value="Vai al sito selezionato" onclick="aprisito()">
+        </form>
+    </body>
+</html>
