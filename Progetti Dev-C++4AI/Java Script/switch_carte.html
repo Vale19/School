@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Galleria immagini</title>
         <script type="text/javascript">
-            var foto=("asso_fiori.jpg" "asso_picche.jpg" "asso_cuori.jpg" "asso_quadri.jpg")
-            var cont=2
+            var foto=["asso_fiori.jpg","asso_picche.jpg","asso_cuori.jpg","asso_quadri.jpg"]    
+            var cont=0
             function indietro(){
                 cont++
-                document.getElementById("figura").src="immagini/"+ foto[cont]
+                document.getElementById("figura").src= foto[cont]
                 if(cont == 0)
                     document.getElementById("1").disabled=true 
                 else
@@ -14,8 +15,8 @@
             }
             function avanti(){
                 cont++
-                document.getElementById("figura").src="immagini/" + foto[cont]
-                if(cont==2)
+                document.getElementById("figura").src= foto[cont]
+                if(cont==3)
                     document.getElementById("a").disabled=true
                 else
                     document.getElementById("1").disabled=false 
@@ -23,6 +24,11 @@
         </script>
     </head>
     <body>
-        <img id="figura" src="" alt="">
+        <img id="figura" src="asso_fiori.jpg ", src="asso_picche.jpg", src="asso_cuori.jpg", src="asso_quadri.jpg">
+        <br>
+        <form>
+            <input type="button" id="1" value="---" onclick="indietro()">
+            <input type="button" id="a" value="--->" onclick="avanti()">
+        </form>
     </body>
 </html>
